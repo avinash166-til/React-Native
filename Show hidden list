@@ -1,0 +1,226 @@
+import React,{useState} from 'react';
+
+import {View, Text, TextInput,Image,StyleSheet,TouchableHighlight,TouchableOpacity, ScrollView} from 'react-native';
+
+
+const ViewBoxesWithColorAndText = () => {
+ 
+
+  
+   
+  const [shouldShow,setShouldShow] = useState(false);
+  const [shouldShow1,setShouldShow1] = useState(false);
+  const [shouldShow2,setShouldShow2] = useState(false);
+  const [shouldShow3,setShouldShow3] = useState(false);
+  const [shouldShow4,setShouldShow4] = useState(false);
+  const [shouldShow5,setShouldShow5] = useState(false);
+  return (
+
+    <View
+      style={{
+        height:"5%", 
+
+        padding:10,
+           }}>
+
+
+                    
+   <View style={styles.container}>
+   <TouchableOpacity >
+  <View style={{alignItems:'center',flex:0, margin:"3%",flexDirection:"row"}}>
+
+      <Image 
+        style={styles.tinyLogo}
+        source={{
+          uri: 'https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcS5NrdnnkL8LFT7aRkA_wzdzQSzIrhwUxzbBhPiW1ITOL9nLAMD ',
+        }}
+      />
+
+        <Text style={{fontWeight:"bold"}}>Setting</Text>  
+        
+        </View>
+        </TouchableOpacity>
+
+
+        
+
+
+
+        <TouchableOpacity onPress={() => setShouldShow1 (!shouldShow1)}>
+       <View style={{alignItems:'center',flex:0, backgroundColor: "white", height:"60%",margin:"2%",flexDirection:"row",elevation:2,justifyContent: "space-between"}} >
+
+
+      <Text>Remainder Setting</Text>
+
+      <Image 
+        style={styles.tinyLogo}
+
+        source={{
+          uri: 'https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcSVOFzDHj50zRhxLvPkeVCuTCiGIRUwRirMIBIeQ-D28HvF-o1V',
+        }}
+      />
+
+          </View>
+          </TouchableOpacity>
+          
+          <View >   
+            
+              {
+      shouldShow1?(
+        <View style={{flex:0, backgroundColor: "white", height:"65%",margin:"2%",elevation:2,justifyContent: "space-between"}}>
+        <Text>Nothing </Text>
+        <Text >All the Best </Text>
+      </View >
+      ):null
+          }
+          
+      </View>
+
+
+
+          <TouchableOpacity onPress={() => setShouldShow2 (!shouldShow2)}>
+
+      <View style={{alignItems:'center',flex:0, backgroundColor: "white", height:"60%",margin:"2%",flexDirection:"row",elevation:2,justifyContent: "space-between"}} >
+      <Text>About H-Cura</Text>
+
+       <Image 
+        style={styles.tinyLogo}
+        source={{
+          uri: 'https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcSVOFzDHj50zRhxLvPkeVCuTCiGIRUwRirMIBIeQ-D28HvF-o1V',
+        }}
+      />
+
+
+      </View>
+      </TouchableOpacity>
+
+      <View>
+        {
+      shouldShow2?(
+        <View style={{flex:0, backgroundColor: "white", height:"65%",margin:"2%",elevation:2,justifyContent: "space-between"}}>
+       <Text>All the Best </Text>
+       <Text>All the Best </Text>
+       </View>
+      ):null
+          }
+          
+      </View>
+
+
+      <TouchableOpacity onPress={() => setShouldShow3 (!shouldShow3)}>
+      <View style={{alignItems:'center',flex:0, backgroundColor: "white", height:"60%",margin:"2%",flexDirection:"row",elevation:2,justifyContent: "space-between"}} >
+      <Text>Rate Us</Text>
+
+       <Image
+        style={styles.tinyLogo}
+      source={{
+        uri: 'https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcSVOFzDHj50zRhxLvPkeVCuTCiGIRUwRirMIBIeQ-D28HvF-o1V',
+      }}
+      />
+
+      </View>
+      </TouchableOpacity>
+
+      <View>
+        {
+      shouldShow3?(
+        <View style={{flex:0, backgroundColor: "white", height:"65%",margin:"2%",elevation:2,justifyContent: "space-between"}}>
+       <Text>All the Best </Text>
+       <Text>All the Best </Text>
+       </View>
+       
+      ):null
+          }
+         
+      </View>
+
+
+      <TouchableOpacity onPress={() => setShouldShow4 (!shouldShow4)}>
+
+
+      <View style={{ alignItems:'center',flex:0,backgroundColor: "white", height:"60%",margin:"2%",flexDirection:"row",elevation:2,justifyContent: "space-between" }} >
+      <Text>Terms & Conditions</Text>
+
+       <Image
+        style={styles.tinyLogo}
+        source={{
+          uri: 'https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcSVOFzDHj50zRhxLvPkeVCuTCiGIRUwRirMIBIeQ-D28HvF-o1V',
+        }}
+      />
+
+      
+
+      </View>
+      </TouchableOpacity>
+      <View>
+        {
+      shouldShow4?(
+        <View style={{flex:0, backgroundColor: "white", height:"65%",margin:"2%",elevation:2,justifyContent: "space-between"}}>
+       <Text>All the Best </Text>
+       <Text>All the Best </Text>
+       </View>
+      ):null
+          }
+          
+      </View>
+
+      
+
+           <TouchableOpacity onPress={() => setShouldShow5 (!shouldShow5)}>
+       
+       <View style={{alignItems:'center',flex:0,backgroundColor: "white", height:"60%",margin:"2%",flexDirection:"row",elevation:2,justifyContent: "space-between"}} >
+
+
+      <Text>Privacy Policy</Text>
+
+
+       <Image
+        style={styles.tinyLogo}
+
+        source={{
+          uri: 'https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcSVOFzDHj50zRhxLvPkeVCuTCiGIRUwRirMIBIeQ-D28HvF-o1V',
+        }}  />
+
+      </View>
+
+      </TouchableOpacity>
+      <View>
+        {
+      shouldShow5?(
+        <View style={{flex:0, height:"65%",backgroundColor: "white",margin:"2%",elevation:2,justifyContent: "space-between"}}>
+      <View>
+       <Text>Good By </Text>
+       </View>
+       <View>
+       <Text>Wellcome Back</Text>
+       </View>
+       </View>
+      ):null
+          }
+          
+      </View>
+      </View>
+    </View>
+  
+
+
+  );
+};
+
+
+const styles = StyleSheet.create({
+  container: {
+    paddingTop: 10,
+        },
+  tinyLogo: {
+    width: 30,
+    height: 20,
+  },
+  logo: {
+    width: 66,
+    height: 58,
+  },
+});
+
+
+export default ViewBoxesWithColorAndText;
